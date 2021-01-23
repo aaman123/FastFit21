@@ -1,0 +1,25 @@
+.chika {
+    border-radius: 10%;
+  }
+
+  
+.image-icon {
+    max-width: 100%;
+    height: 250px;
+    border-radius: 50%;
+    padding: 17%;
+  }
+
+@font-face {
+    font-family: my-brand;
+    src: url(../assets/icon/TESLA.ttf);
+}
+
+@font-face{
+    font-family: my-brand-2;
+    src: url(../assets/icon/czesko.otf);
+}
+
+.external-font {
+    font-family: my-brand;
+}

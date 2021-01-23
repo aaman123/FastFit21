@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavigationStart, Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,15 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(private router: Router) {}
+
+  ngOnInit() {
+    // this.router.events.subscribe( event => {
+    //   if( event instanceof  NavigationEnd) {
+    //     location.reload();
+    //     console.log('chikababu')
+    //   }
+    // })
+  }
 
 }

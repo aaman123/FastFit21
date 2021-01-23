@@ -1,20 +1,195 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button style="color:#FC672F" auto-hide='false'></ion-menu-button>
+    </ion-buttons>
+    
+    <ion-searchbar style='font:#FC672F' style="background-image: none;font: bolder;" class="search" placeholder='search plans'></ion-searchbar>
   </ion-toolbar>
 </ion-header>
+  
+  <ion-content>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div  id="container">
+    
+  <div class="moving-clouds" style="background-image: url('../../assets/img/clouds.png'); "></div>
+    
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+    <ion-grid>
+        <ion-row>
+          <ion-col style="flex-direction: row;display: flex;">
+
+            <ion-slides pager="true" [options]="slideOpts">
+              <ion-slide>
+                <ion-card style="border-radius: 10%" class="ion-margin" >
+                  <img style="max-width:100%;height:200px" src="../../assets/img/bodybuilding-stock2.jpg"/>
+                  
+                <ion-card-header style="background-color: black;">
+                  <ion-card-title  class="intro-card-text">WORKOUTS</ion-card-title>
+                </ion-card-header>
+              </ion-card>
+                
+              </ion-slide>
+
+
+              <ion-slide class="ion-padding">
+                <ion-card style="border-radius: 10%;" class="ion-margin" >
+                  <img  style="max-width:100%;height:200px" src="../../assets/img/bodybuilding-stock3.jpg"/>
+                  <ion-card-header style="background-color: black">
+                    
+                    <ion-card-title class="intro-card-text">PILATES</ion-card-title>
+                  </ion-card-header>
+              
+                </ion-card>
+              </ion-slide>
+
+
+              <ion-slide>
+                <ion-card style="border-radius: 10%;" class="ion-margin" >
+                  <img style="max-width:100%;height:200px" src="../../assets/img/yoga-stock1.jpg"/>
+                  <ion-card-header style="background-color: black;">
+                    <ion-card-title class="intro-card-text">YOGA</ion-card-title>
+                  </ion-card-header>
+                </ion-card>
+              </ion-slide>
+
+              <ion-slide>
+                <ion-card style="border-radius: 10%;" class="ion-margin" >
+                  <img style="max-width:100%;height:200px" src="../../assets/img/yoga-stock1.jpg"/>
+                  <ion-card-header style="background-color: black;">
+                    <ion-card-title class="intro-card-text">ZUMBA</ion-card-title>
+                  </ion-card-header>
+                </ion-card>
+              </ion-slide>
+
+              <ion-slide>
+                <ion-card style="border-radius: 10%;" class="ion-margin" >
+                  <img style="max-width:100%;height:200px" src="../../assets/img/kickboxing-stock-2.jpg"/>
+                  <ion-card-header style="background-color: black;">
+                    <ion-card-title class="intro-card-text">KICKBOXING</ion-card-title>
+                  </ion-card-header>
+                </ion-card>
+              </ion-slide>
+
+            </ion-slides>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+
+            <ion-toolbar>
+              <ion-text class="ion-margin" slot="start" style="font: bolder;font-family: my-brand;"><strong>TOP PlANS</strong></ion-text>
+              <ion-buttons class="ion-margin" (click)="presentFilter()" slot="end">
+                <span>
+                  <ion-icon style="color: #FC672F;" slot="icon-only" name="options"></ion-icon>
+                </span>
+              </ion-buttons>
+            </ion-toolbar>
+            
+
+          </ion-col>
+        </ion-row>
+
+        <ion-slides>
+                
+                <ion-slide style="left: -30px;">
+                <ion-card class="ion-margin" style="width: 10rem;height:15rem;border-radius: 10%;">
+                  <img  src="../../assets/img/bodybuilding-stock1.jpg"/>
+                  <ion-card-content>
+                    <ion-text class="card-text ext-center">FULL-BODY BLAST</ion-text>
+                  </ion-card-content>
+                </ion-card>
+    
+                <ion-card style="background:black" class="ion-margin" style="width: 10rem;height:15rem; border-radius: 10%;">
+                  <img src="../../assets/img/bodybuilding-stock2.jpg"/>
+                  <ion-card-content>
+                    <ion-text class="card-text">CORE CONCENTRATOR</ion-text>
+                  </ion-card-content>
+                </ion-card>
+                </ion-slide>
+
+
+                <ion-slide style="left: -30px;">
+                <ion-card class="ion-margin" style="width: 10rem;height:15rem;border-radius: 10%;">
+                  <img src="../../assets/img/bodybuilding-stock3.jpg"/>
+                  <ion-card-content>
+                    <ion-text class="card-text">YOGA UNLEASHED</ion-text>
+                  </ion-card-content>
+                </ion-card>
+    
+                <ion-card class="ion-margin" style="width: 10rem;height:15rem;border-radius: 10%;">
+                  <img src="../../assets/img/yoga-stock1.jpg"/>
+                  <ion-card-content>
+                    <ion-text class="card-text">ARM BLASTER</ion-text>
+                  </ion-card-content>
+                </ion-card>
+              </ion-slide>
+
+              <ion-slide style="left: -30px;">
+                <ion-card class="ion-margin" style="width: 10rem;height:15rem;border-radius: 10%;">
+                  <img src="../../assets/img/kickboxing-stock-2.jpg"/>
+                  <ion-card-content>
+                    <ion-text class="card-text">MINDFUL YOGA</ion-text>
+                  </ion-card-content>
+                </ion-card>
+    
+                <ion-card class="ion-margin" style="width: 10rem;height:15rem;border-radius: 10%;">
+                  <img src="../../assets/img/yoga-stock1.jpg">
+                  <ion-card-content>
+                    <ion-text class="card-text text-center">ZOOM IN WITH ZUMBA</ion-text>
+                  </ion-card-content>
+                </ion-card>
+              </ion-slide>
+                
+    
+  
+        </ion-slides>
+        
+        <ion-row>
+          <ion-col style="display: flex;flex-direction: row;">
+
+            <ion-card>
+              <ion-card-header>
+               <strong>More to explore</strong>
+              </ion-card-header>
+              <ion-card-content>
+                <ion-text style="font-family: futura-pt;">Get the best trainers from all over the world with best plans that are precisely created for each and every individual pursuing any fitness goal, let it be muscle gain , fat loss , calisthenics , yoga , kickboxing , 
+                  pilates, zumba or dance.
+                </ion-text>
+                
+                <div style="display: flex;flex-direction: row;">
+                <img class="ion-margin-top ion-margin-start" style="width: 20%;height:50px;" src="../../assets/img/yoga-pose.svg"/>
+                <img class="ion-margin-top ion-margin-start" style="width: 20%;height:50px;" src="../../assets/img/strong.svg"/>
+                <img class="ion-margin-top ion-margin-start" style="width: 20%;height:50px;" src="../../assets/img/pilates.svg"/>
+                <img class="ion-margin-top  ion-margin-start" style="width: 20%;height:50px;" src="../../assets/img/kickboxing.svg"/>
+              </div>
+<!-- 
+              <div class="ion-margin" style="display: flex;flex-direction:row">
+                <ion-text class="ion-margin">Yoga</ion-text>
+                <ion-text class="ion-margin">Workout</ion-text>
+                <ion-text class="ion-margin">Zumba</ion-text>
+                <ion-text class="ion-margin">Pilates</ion-text>
+              </div> -->
+                
+              </ion-card-content>
+
+              <ion-card></ion-card>
+            </ion-card>            
+
+          </ion-col>
+        </ion-row>
+
+
+      
+          
+
+         <br/>
+         <br/>
+         <br/>
+        
+
+        </ion-grid>
+   </div> 
+
 </ion-content>

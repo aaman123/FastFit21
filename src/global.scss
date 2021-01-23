@@ -24,3 +24,28 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+    ion-app {
+        overflow-x: scroll;
+    }
+
+    ion-menu{
+     --background: var(--ion-color-dark) !important; 
+        ion-content{            
+            --background: var(--ion-color-dark) !important; 
+            ion-header{  
+                ion-toolbar {
+                    --background: var(--ion-color-dark) !important;
+                    ion-title {
+                        --color: white;
+                    }
+                }
+            }
+            ion-list{
+                --background: var(--ion-color-dark) !important;
+                 ion-item{--background: var(--ion-color-dark)!important;--color: #FFFFFF !important;};
+                 ion-icon{ padding-right: 10px !important; }
+            }
+        }
+    }
+

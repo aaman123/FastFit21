@@ -1,0 +1,331 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button style="color:#FC672F" auto-hide='false'></ion-menu-button>
+    </ion-buttons>
+    
+    <ion-searchbar style='font:#FC672F' style="background-image: none;font: bolder;" class="search" placeholder='search plans'></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+  
+
+<ion-content>
+
+  <div id="container">
+    <!-- <div class="moving-clouds" style="background-image: url('../../assets/img/clouds.png'); "></div> -->
+
+    <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+      <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+  
+
+    <ion-row>
+      <ion-col>
+
+        <ion-text>
+          <h1 style="font-family: my-brand;color: white;">Sneek Peak: Meet our trainers</h1>
+        </ion-text>
+
+      </ion-col>
+    </ion-row>
+
+
+    <ion-row>
+
+      <ion-col>
+<!-- 
+        <ion-text>
+          <h1 style="font-family: my-brand-2;color: white;">Workout experts</h1>
+        </ion-text> -->
+        
+     
+          <div class="filtering col-sm-12 text-center pt-2">
+
+            <ion-slides>
+              <ion-slide>
+                <ion-item-sliding>
+                <ion-item>
+                <ion-label data-filter="*" class="ion-text-center active ion-margin" >ALL</ion-label>
+              </ion-item>
+                <ion-item-options side='end'>
+                  <ion-item-option data-filter=".male" color='primary'>
+                    MALE
+                  </ion-item-option>
+                  <ion-item-option data-filter=".female" color='danger'>
+                    FEMALE
+                  </ion-item-option>
+                </ion-item-options>
+              </ion-item-sliding>
+              </ion-slide>
+
+                <ion-slide>
+                  <ion-item-sliding>
+                  <ion-item>
+                  <ion-label data-filter=".workout" class="ion-text-center ion-margin ">WORKOUT</ion-label>
+                </ion-item>
+                  <ion-item-options side='end'>
+                    <ion-item-option data-filter=".male-workout" color='primary'>
+                      MALE
+                    </ion-item-option>
+                    <ion-item-option data-filter=".female-workout" color='danger'>
+                      FEMALE
+                    </ion-item-option>
+                  </ion-item-options>
+                </ion-item-sliding>
+                </ion-slide>
+
+
+                <ion-slide>
+                  <ion-item-sliding>
+                  <ion-item>
+                  <ion-label data-filter=".yoga" class="ion-text-center  ion-margin ">YOGA</ion-label>
+                </ion-item>
+                  <ion-item-options side='end'>
+                    <ion-item-option data-filter=".male-yoga" color='primary'>
+                      MALE
+                    </ion-item-option>
+                    <ion-item-option data-filter=".female-yoga" color='danger'>
+                      FEMALE
+                    </ion-item-option>
+                  </ion-item-options>
+                </ion-item-sliding>
+                </ion-slide>
+
+                <ion-slide>
+                  <ion-item-sliding>
+                  <ion-item>
+                  <ion-label data-filter=".pilates" class="ion-text-center  ion-margin ">PILATES</ion-label>
+                </ion-item>
+                  <ion-item-options side='end'>
+                    <ion-item-option data-filter=".male-pilates" color='primary'>
+                      MALE
+                    </ion-item-option>
+                    <ion-item-option data-filter=".female-pilates" color='danger'>
+                      FEMALE
+                    </ion-item-option>
+                  </ion-item-options>
+                </ion-item-sliding>
+                </ion-slide>
+
+                <ion-slide>
+                  <ion-item-sliding>
+                  <ion-item>
+                  <ion-label data-filter=".zumba" class="ion-text-center  ion-margin ">ZUMBA</ion-label>
+                </ion-item>
+                  <ion-item-options side='end'>
+                    <ion-item-option data-filter=".male-zumba" color='primary'>
+                      MALE
+                    </ion-item-option>
+                    <ion-item-option data-filter=".female-zumba" color='danger'>
+                      FEMALE
+                    </ion-item-option>
+                  </ion-item-options>
+                </ion-item-sliding>
+                </ion-slide>
+
+                <ion-slide>
+                  <ion-item-sliding>
+                  <ion-item>
+                  <ion-label data-filter=".kickboxing" class="ion-text-center ion-margin ">KICKBOXING</ion-label>
+                </ion-item>
+                  <ion-item-options side='end'>
+                    <ion-item-option data-filter=".male-kickboxing" color='primary'>
+                      MALE
+                    </ion-item-option>
+                    <ion-item-option data-filter=".female-kickboxing" color='danger'>
+                      FEMALE
+                    </ion-item-option>
+                  </ion-item-options>
+                </ion-item-sliding>
+                </ion-slide>
+
+                
+            </ion-slides>
+            
+        </div>
+        
+      
+        
+
+        <ul class="da-thumbs gallery">
+
+          <li (click)='playVideo()' class="items workout male-workout male ion-margin">
+            
+            <img style="height: 200px;border-radius: 10%;position: relative;" src="../../../assets/img/trainer1.jpg"/>
+            <ion-text style='color:white;position: absolute;left: 5%;top: 70%;position: absolute;'>Jeff Seid</ion-text>            
+
+          </li>
+
+          <li class="items pilates male-pilates female ion-margin">
+            <img style=" height: 200px;border-radius: 10%;position: relative; " src="../../../assets/img/girltrainer4.jpg"/>
+            <ion-text style='color:white;position: absolute;left: 5%;top: 70%;'>Amanda Cerny</ion-text>
+          </li>
+
+          <li class="items pilates female-pilates male ion-margin">
+            <img style=" height: 200px; border-radius: 10%; position: relative;" src="../../../assets/img/trainer2.jpg"/>
+            <ion-text style='color:white;position: absolute;left: 5%;top: 70%;'>Jay Cutler</ion-text>
+          </li>
+
+          <li class="items pilates male-pilates female ion-margin">
+            <img style=" height: 200px;border-radius: 10%;position: relative; " src="../../../assets/img/girltrainer4.jpg"/>
+            <ion-text style='color:white;position: absolute;left: 5%;top: 70%;'>Amanda Cerny</ion-text>
+          </li>
+
+          <li class="items zumba male-zumba female-kickboxing female ion-margin">
+            <img style=" height: 200px; border-radius: 10%;position: relative; " src="../../../assets/img/girltrainer5.jpg"/>
+            <!-- <ion-text style='color:white;position: absolute;'>Lin Lowess</ion-text> -->
+            <ion-text style='color:white;position: absolute;left: 5%;top: 70%;'>Linn Lowess</ion-text>
+          </li>
+
+          <li class="items zumba male-zumba female-kickboxing female ion-margin">
+            <img style=" height: 200px; border-radius: 10%;position: relative; " src="../../../assets/img/girltrainer5.jpg"/>
+            <!-- <ion-text style='color:white;position: absolute;'>Lin Lowess</ion-text> -->
+            <ion-text style='color:white;position: absolute;left: 5%;top: 70%;'>Linn Lowess</ion-text>
+          </li>
+
+          
+          <li class="items workout female-workout male ion-margin">
+            <img style="height: 200px; border-radius: 10%; position: relative;" src="../../../assets/img/trainer3.jpg"/>
+            <!-- <ion-text style='color:white;position: absolute;'>Ronnie Coleman</ion-text> -->
+            <ion-text style='color:white;position: absolute;left: 5%;top: 70%;'>Ronnie Coleman</ion-text>
+          </li>
+
+          <li class="items workout female-workout male ion-margin">
+            <img style="height: 200px; border-radius: 10%; position: relative;" src="../../../assets/img/trainer3.jpg"/>
+            <!-- <ion-text style='color:white;position: absolute;'>Ronnie Coleman</ion-text> -->
+            <ion-text style='color:white;position: absolute;left: 5%;top: 70%;'>Ronnie Coleman</ion-text>
+          </li>
+
+          <li class="items workout female-workout male ion-margin">
+            <img style="height: 200px; border-radius: 10%; position: relative;" src="../../../assets/img/trainer3.jpg"/>
+            <!-- <ion-text style='color:white;position: absolute;'>Ronnie Coleman</ion-text> -->
+            <ion-text style='color:white;position: absolute;left: 5%;top: 70%;'>Ronnie Coleman</ion-text>
+          </li>
+
+          <li class="items zumba female-zumba female ion-margin">
+            <img style="height: 200px;border-radius: 10%;position: relative;" src="../../../assets/img/trainer1.jpg"/>
+          </li>
+
+          
+          <li class="items zumba female-zumba female ion-margin">
+            <img style="height: 200px;border-radius: 10%;position: relative;" src="../../../assets/img/trainer1.jpg"/>
+          </li>
+
+          <li class="items pilates male-pilates male ion-margin">
+            <img style=" height: 200px;border-radius: 10% " src="../../../assets/img/girltrainer4.jpg"/>
+            <!-- <ion-text style='color:white;position: absolute;'>Amanda Cerny</ion-text> -->
+          </li>
+
+          <li class="items kickboxing female-kickboxing male ion-margin">
+            <img style=" height: 200px; border-radius: 10%; " src="../../../assets/img/trainer2.jpg"/>
+            <!-- <ion-text style='color:white;position: absolute;'>Jay Cutler</ion-text> -->
+          </li>
+
+          <li class="items zumba female-zumba female ion-margin">
+            <img style=" height: 200px; border-radius: 10%; " src="../../../assets/img/girltrainer5.jpg"/>
+            <!-- <ion-text style='color:white;position: absolute;'>Lin Lowess</ion-text> -->
+          </li>
+
+          
+          <li class="items zumba female-zumba female ion-margin">
+            <img style="height: 200px;border-radius: 10%;position: relative;" src="../../../assets/img/trainer1.jpg"/>
+          </li>
+
+          
+          <li class="items yoga female-yoga male ion-margin">
+            <img style="height: 200px; border-radius: 10%; " src="../../../assets/img/trainer3.jpg"/>
+            <!-- <ion-text style='color:white;position: absolute;'>Ronnie Coleman</ion-text> -->
+          </li>
+
+          <li class="items workout male-workout male ion-margin">
+            <img style="height: 200px;border-radius: 10%;position: relative;" src="../../../assets/img/trainer1.jpg"/>
+          </li>
+
+          <li class="items workout male-workout male ion-margin">
+            <img style="height: 200px;border-radius: 10%;position: relative;" src="../../../assets/img/trainer1.jpg"/>
+          </li>
+
+          <li class="items pilates female-pilates ion-margin">
+            <img style=" height: 200px;border-radius: 10% " src="../../../assets/img/girltrainer4.jpg"/>
+            <!-- <ion-text style='color:white;position: absolute;'>Amanda Cerny</ion-text> -->
+          </li>
+
+          <li class="items kickboxing male-kickboxing ion-margin">
+            <img style=" height: 200px; border-radius: 10%; " src="../../../assets/img/trainer2.jpg"/>
+            <!-- <ion-text style='color:white;position: absolute;'>Jay Cutler</ion-text> -->
+          </li>
+
+          <li class="items yoga male-yoga ion-margin">
+            <img style=" height: 200px; border-radius: 10%; " src="../../../assets/img/girltrainer5.jpg"/>
+            <!-- <ion-text style='color:white;position: absolute;'>Lin Lowess</ion-text> -->
+          </li>
+
+          
+          <li class="items kickboxing female-kickboxing ion-margin">
+            <img style="height: 200px; border-radius: 10%; " src="../../../assets/img/trainer3.jpg"/>
+            <!-- <ion-text style='color:white;position: absolute;'>Ronnie Coleman</ion-text> -->
+          </li>
+
+        </ul>
+
+      </ion-col>
+
+    </ion-row>
+
+    <!-- <ion-row>
+
+      <ion-col>
+
+        
+        <ion-text>
+          <h1 style="font-family: my-brand-2;color: white;">Yoga</h1>
+        </ion-text>
+        
+
+  
+          <ion-slides>
+  
+            <ion-slide style="left: -30px;display: flex;flex-direction: column;">
+  
+              
+              <img style="height: 200px;border-radius: 10%;position: relative;" src="../../../assets/img/trainer1.jpg"/>
+              <ion-text style='color:white;position: absolute;'>Jeff Seid</ion-text>
+            
+              
+  
+            </ion-slide>
+  
+            <ion-slide style="left: -80px;;">
+              <img style=" height: 200px;border-radius: 10% " src="../../../assets/img/girltrainer4.jpg"/>
+              <ion-text style='color:white;position: absolute;'>Amanda Cerny</ion-text>
+            </ion-slide>
+  
+            <ion-slide style="left: -80px;">
+              <img style=" height: 200px; border-radius: 10%; " src="../../../assets/img/trainer2.jpg"/>
+              <ion-text style='color:white;position: absolute;'>Jay Cutler</ion-text>
+            </ion-slide>
+  
+            <ion-slide style="left: -80px;">
+              <img style=" height: 200px; border-radius: 10%; " src="../../../assets/img/girltrainer5.jpg"/>
+              <ion-text style='color:white;position: absolute;'>Lin Lowess</ion-text>
+            </ion-slide>
+  
+            
+            <ion-slide style="left: -80px;">
+              <img style="height: 200px; border-radius: 10%; " src="../../../assets/img/trainer3.jpg"/>
+              <ion-text style='color:white;position: absolute;'>Ronnie Coleman</ion-text>
+            </ion-slide>
+  
+
+        </ion-slides>
+
+
+
+      </ion-col>
+
+    </ion-row> -->
+
+    
+  </div>
+
+</ion-content>

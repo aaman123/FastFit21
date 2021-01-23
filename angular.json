@@ -39,7 +39,11 @@
                 "input": "src/global.scss"
               }
             ],
-            "scripts": []
+            "scripts": [
+              {
+                "input": "src/assets/js/fastfit21.js"
+              }
+            ]
           },
           "configurations": {
             "production": {

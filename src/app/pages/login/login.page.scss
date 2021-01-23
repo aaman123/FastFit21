@@ -1,0 +1,82 @@
+#container {
+    text-align: center;
+  
+   
+    left: 0;
+    right: 0;
+   
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    
+  }
+
+  
+  .moving-clouds {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    width: 250.625em;
+    height: 43.75em;
+    -webkit-animation: cloudLoop 80s linear infinite;
+    animation: cloudLoop 80s linear infinite;
+  }
+
+  
+
+  
+  
+  
+  @keyframes cloudLoop {
+    0% {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      -webkit-transform: translate3d(-50%, 0, 0);
+      transform: translate3d(-50%, 0, 0);
+    }
+  }
+  
+  .image-icon {
+    max-width: 100%;
+    height: 200px;
+    border-radius: 50%;
+  }
+  
+  .login-input {
+    --background:transparent;
+  }
+  
+  
+  
+  .login-button {
+    --background: #FE672E;
+    position: relative;
+    z-index: 10;
+  }
+  
+  
+  
+  #container strong {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  
+  #container p {
+    font-size: 16px;
+    line-height: 22px;
+  
+    color: #8c8c8c;
+  
+    margin: 0;
+  }
+  
+  #container a {
+    text-decoration: none;
+  }
+  
+  ion-content ion-toolbar {
+    --background: translucent;
+  }

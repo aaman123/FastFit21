@@ -1,7 +1,8 @@
 {
   "name": "Fastfit21",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {},
+    "cordova": {}
   },
   "type": "angular"
 }
